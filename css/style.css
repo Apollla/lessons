@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #F2F8F6;
+  display: flex;
+}
+
+/* section forms */
+
+.img {
+  max-width: 222.67px;
+  max-height: 576.69px;
+  margin: 18px 146.33px 0 315px;
+}
+
+.border {
+  width: 446.67px;
+  height: 437.32px;
+  border: 20px solid green;
+  background-color: transparent;
+  position: relative;
+  z-index: -1;
+  top: 48.06px;
+  left: 33.33px;
+}
+
+.square {
+  position: absolute;
+  width: 446.67px;
+  height: 437.32px;
+  background-color: white;
+  z-index: -1;
+  top: 67.28px;
+  left: 169px;
+}
+
+/* section content */
+.content {
+  display: inline-block;
+  max-width: 557px;
+  width: 100%;
+  margin: 115px 39px 57.3px 0;
+}
+
+.content__header {
+  font: 500 50px/1 "Roboto", sans-serif;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left: 5px;
+  margin-bottom: 19px;
+}
+
+.content__text {
+  display: inline-block;
+  font: 400 20px/1 "Roboto", sans-serif;
+  line-height: 140%;
+  padding-left: 7px;
+  margin-bottom: 23px;
+}
+
+.content__list {
+  font: 500 20px/1 "Roboto", sans-serif;
+  line-height: 140%;
+  padding-left: 20px;
+  margin-bottom: 42px;
+}
+
+.content__list__item {
+  margin-bottom: 13px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content__list__item::before {
+  content: '';
+  background: url('../img/tick.svg') 0 0 no-repeat;
+  width: 12px;
+  height: 13.46px;
+  position: absolute;
+  top: 7px;
+  left: -18.54px;
+}
+
+.detail__button {
+  font: 500 20px/1 "Roboto", sans-serif;
+  line-height: 120%;
+  color: white;
+  background: #408858;
+  display: inline-block;
+  padding: 17px 42.45px 17.6px 43px;
+}
