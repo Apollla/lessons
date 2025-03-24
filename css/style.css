@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* section empoyees */
+.employees {
+  padding: calc(50% - 449px) calc(50% - 508.5px);
+}
+
+.employees__header {
+  font: 600 40px/1 "OpenSans", sans-serif;
+  line-height: 140%;
+  text-align: center;
+}
+
+.employees__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  gap: 78px 169px;
+  margin-top: 90px;
+}
+
+.employees__item {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  position: relative;
+
+  &:first-child {
+    width: 235px;
+  }
+}
+
+.employees__photo {
+  width: 220px;
+  height: 224px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#eugene {
+  margin-left: 200.5px;
+}
+
+#fred {
+  margin-right: 200.5px;
+}
+
+.employees__name {
+  font: 700 24px/1 "OpenSans", sans-serif;
+  line-height: 140%;
+  color: #194F94;
+}
+
+.employees__position {
+  font: 400 17px/1 "OpenSans", sans-serif;
+  line-height: 150%;
+}
+
+.employees__item::before {
+  content: '';
+  background: url(../img/full.svg);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 159px;
+  left: 149px;
+}
