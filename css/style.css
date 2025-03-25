@@ -40,24 +40,36 @@ li {
 
 /* section empoyees */
 .employees {
-  padding: calc(50% - 449px) calc(50% - 508.5px);
+  padding: 100px calc(50% - 508.5px);
 }
 
 .employees__header {
   font: 600 40px/1 "OpenSans", sans-serif;
   line-height: 140%;
   text-align: center;
+  position: relative;
+}
+
+.employees__header::after {
+  content: '';
+  background-image: url(../img/line.svg);
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  top: 86px;
+  right: 452.5px;
 }
 
 .employees__list {
   display: flex;
   flex-wrap: wrap;
-
-  align-items: center;
+  align-items: first baseline;
+  justify-content: center;
   gap: 78px 169px;
   margin-top: 90px;
 }
 
+/*white position*/
 .employees__item {
   display: flex;
   flex-direction: column;
@@ -75,14 +87,6 @@ li {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-}
-
-#eugene {
-  margin-left: 200.5px;
-}
-
-#fred {
-  margin-right: 200.5px;
 }
 
 .employees__name {
@@ -104,4 +108,106 @@ li {
   position: absolute;
   top: 159px;
   left: 149px;
+}
+
+/* blue position */
+.card-blue {
+  height: auto;
+  height: 100%;
+  width: 250px;
+  opacity: 0;
+  position: absolute;
+  border-radius: 13px;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+li {
+  &:nth-child(1) {
+    >.card-blue {
+      background-image: url(../img/rodion1.png);
+    }
+  }
+
+  &:nth-child(2) {
+    >.card-blue {
+      background-image: url(../img/sergey1.png);
+    }
+  }
+
+  &:nth-child(3) {
+    >.card-blue {
+      background-image: url(../img/maria1.png);
+      width: 224px;
+    }
+  }
+
+  &:nth-child(4) {
+    >.card-blue {
+      background-image: url(../img/eugene1.png);
+    }
+  }
+
+  &:nth-child(5) {
+    >.card-blue {
+      background-image: url(../img/fred1.png);
+    }
+  }
+
+  &:nth-child(3) {
+    >.card-white {
+      width: 224px;
+    }
+  }
+
+}
+
+.card-blue::before {
+  content: '';
+  background: url(../img/arrow.svg);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 159px;
+  left: 149px;
+}
+
+.employees__photo-blue {
+  max-width: 210px;
+  max-height: 214px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  border: 1px solid white;
+  display: inline-block;
+}
+
+.employees__name__blue {
+  font: 700 24px/1 "OpenSans", sans-serif;
+  line-height: 140%;
+  color: white;
+  text-align: left;
+}
+
+.employees__position__blue {
+  font: 400 17px/1 "OpenSans", sans-serif;
+  line-height: 140%;
+  color: white;
+  flex-grow: 1;
+  text-align: left;
+}
+
+
+/*hover effect*/
+.card-blue:hover {
+  opacity: 1;
+
 }
