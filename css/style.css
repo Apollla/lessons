@@ -112,8 +112,7 @@ li {
 
 /* blue position */
 .card-blue {
-  height: auto;
-  height: 100%;
+  height: 330px;
   width: 250px;
   opacity: 0;
   position: absolute;
