@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Urbanist";
+  src: url("../fonts/Urbanist-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../fonts/Urbanist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --nav-font: 600 16px/1 "Quicksand", sans-serif;
+  --nav-color: #343434;
+  --btn-font: 500 16px/1 "DMSans", sans-serif;
+  --header-font: 700 48px/1 "Urbanist", sans-serif;
+}
+
+.body {
+  max-width: 1440px;
+  min-width: 360px;
+}
+
+/*style header*/
+.header {
+  padding-top: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__logo {
+  padding-left: 10.4%;
+  height: 20.48px;
+}
+
+.menu-list {
+  width: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.menu__link {
+  font: var(--nav-font);
+  color: var(--nav-color);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.69vw;
+  padding-right: 11.52%;
+}
+
+.header__login-btn {
+  padding: 1.04vw 2.08vw;
+  border-radius: 5px;
+}
+
+.header__sign-up-btn {
+  padding: 1.04vw 2.08vw;
+  background: #125B50;
+  color: #FAF5E4;
+  border-radius: 5px;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: none;
+}
+
+/*Representatiom*/
+.representation {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 148px 6.38% 13.61vw 9.16%;
+  gap: 4.72vw;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 40%, rgba(255, 182, 193, 0.5) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.representation-container {
+  flex-direction: column;
+  width: 41.18vw;
+}
+
+h1 {
+  font: var(--header-font);
+  margin-bottom: 12px;
+}
+
+.representation-text {
+  font: 500 20px/1 "Quicksand", sans-serif;
+  margin-bottom: 70px;
+}
+
+.start-btn {
+  padding: 1.39vw 2.43vw;
+  background: #125B50;
+  font: 600 20px/1 "Quicksand", sans-serif;
+  color: #FAF5E4;
+  border-radius: 5px;
+}
+
+.girl-img {
+  width: 38vw;
+  height: 22.7vw;
+}
+
+
+
+
+
+
+/* Mobile device*/
+@media only screen and (max-width:850px) {
+
+  /* Header */
+  .header {
+    padding: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .header__logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    background: #125B50;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    margin-top: -900px;
+    transition: all 0.5s ease;
+
+  }
+
+  .mobile-menu {
+    margin-top: 0;
+    border-bottom-right-radius: 30%;
+  }
+
+  .representation {
+    flex-direction: column;
+    align-items: center;
+    gap: 9vw;
+  }
+
+  .representation-container {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+}

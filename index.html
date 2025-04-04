@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>estac</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <a href="#" class="header__logo">
+      <img src="img/black-logo.svg" class="header__logo" alt="logo" title="estac logo">
+    </a>
+
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu__list__item">
+          <a href="#" class="menu__link">Products</a>
+        </li>
+        <li class="menu__list__item">
+          <a href="#" class="menu__link">Resources</a>
+        </li>
+        <li class="menu__list__item">
+          <a href="#" class="menu__link">Support</a>
+        </li>
+        <li class="menu__list__item">
+          <a href="#" class="menu__link">Free Tools</a>
+        </li>
+        <li class="menu__list__item">
+          <a href="#" class="menu__link">Pricing</a>
+        </li>
+        <li class="menu__list__item">
+          <button type="login-button" class="header__login-btn">Login</button>
+        </li>
+        <li class="menu__list__item">
+          <button type="sign-up-button" class="header__sign-up-btn">Signup</button>
+        </li>
+      </ul>
+    </nav>
+
+    <img src="img/menu.svg" class="menu-btn" alt="logo" title="estac logo">
+  </header>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn')
+    const menulist = document.querySelector('.menu-list')
+
+    menuBtn.addEventListener('click', () => {
+      menulist.classList.toggle('mobile-menu')
+    })
+  </script>
+
+  <main class="content">
+
+    <section class="representation">
+
+      <div class="representation-container">
+        <h1 clacc="representation-header">Monitoring Availability And End User Experience Made Simple.</h1>
+        <p class="representation-text">Simple to start, powerful to build better outcomes for DevOps and IT Operations.
+        </p>
+        <a href="#" class="start-btn">Start 30 Day Free Trail</a>
+      </div>
+      <img src="img/girl.png" class="girl-img" alt="logo" title="estac logo">
+
+    </section>
+  </main>
+</body>
+
+</html>
