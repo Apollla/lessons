@@ -237,17 +237,169 @@
         <div class="inform-customers__text-contanier">
           <h2 class="inform-customers__header">Inform your customers about incidents with status pages</h2>
           <p class="inform-customers__text">Show them how you thrive to make your service 100% online.</p>
+
         </div>
         <img src="img/dashboard.png" class="inform-customers__img" alt="user-monitoring" title="user-monitoring">
-        <div class="inform-customers__btns">
-          <a href="#" class="inform-customers__start-btn">Start 30 Day Free Trail</a>
-          <a href="#" class="inform-customers__sign-btn">Sign Up Now</a>
-
-        </div>
-
+      </div>
+      <div class="inform-customers__btns">
+        <a href="#" class="inform-customers__start-btn inform-customers-btn">Start 30 Day Free Trail</a>
+        <a href="#" class="inform-customers__sign-btn inform-customers-btn">Sign Up Now</a>
 
       </div>
     </section>
+
+    <section class="check">
+      <h2 class="check__header">Let’s Check What Out Clients Say about Us</h2>
+      <p class="check__text">Simple to start, powerful at scale, and proven to build better outcomes for your
+        organizaation.</p>
+
+      <div class="comment">
+        <div class="comment__client">
+          <img src="img/client.png" class="client-photo" alt="user-monitoring" title="user-monitoring">
+          <div class="client-info">
+            <p class="client-name">Jonathon Smith</p>
+            <p class="client-occupation">Project Manager</p>
+          </div>
+        </div>
+        <blockquote class="comment__text">I’ve downloaded Hrrd from my Google Play about 1 years ago. This make the
+          prototype
+          process so easy and faster. I feel it is a best app for prototype.</blockquote>
+
+        <div class="comment__info">
+          <p class="comment__date">9th June, 2022</p>
+          <ul class="comment__rate">
+            <li class="comment__rate__item">
+              <img src="img/star.svg" class="client-photo" alt="user-monitoring" title="user-monitoring">
+            </li>
+            <li class="comment__rate__item">
+              <img src="img/star.svg" class="client-photo" alt="user-monitoring" title="user-monitoring">
+            </li>
+            <li class="comment__rate__item">
+              <img src="img/star.svg" class="client-photo" alt="user-monitoring" title="user-monitoring">
+            </li>
+            <li class="comment__rate__item">
+              <img src="img/star.svg" class="client-photo" alt="user-monitoring" title="user-monitoring">
+            </li>
+            <li class="comment__rate__item">
+              <img src="img/star.svg" class="client-photo" alt="user-monitoring" title="user-monitoring">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+
+      <div class="pricing__container">
+        <h2 class="pricing__header">Flexible pricing options</h2>
+
+
+        <div class="toggle" id="toggle">
+          <div class="active">Monthly</div>
+          <div class="inactive">Yearly</div>
+        </div>
+
+        <script>
+          const toggle = document.getElementById('toggle');
+          const items = toggle.children;
+
+          toggle.addEventListener('click', () => {
+            items[0].classList.toggle('active');
+            items[0].classList.toggle('inactive');
+            items[1].classList.toggle('active');
+            items[1].classList.toggle('inactive');
+          });
+        </script>
+
+        <ul class="pricing__cards">
+          <li class="cards__item">
+            <h6 class="cards__item__header">Starter</h6>
+            <div class="cards__item__price">
+              <p class="price__number">$75</p>
+              <p class="price__term">/month</p>
+            </div>
+            <ul class="cards__item__services">
+              <li class="services__item">10 Websites/Servers</li>
+              <li class="services__item">1 Synthetic Web Transaction</li>
+              <li class="services__item">1-minute Poll Frequency</li>
+              <li class="services__item">Select from over 120+ Locations</li>
+              <li class="services__item">5 Network Monitoring Interfaces</li>
+              <li class="services__item">2 NetFlow Analyzer Interfaces</li>
+            </ul>
+            <a href="#" class="cards__item__link">Sign Up Now</a>
+          </li>
+          <li class="cards__item">
+            <h6 class="cards__item__header">Pro</h6>
+            <div class="cards__item__price">
+              <p class="price__number">$115</p>
+              <p class="price__term">/month</p>
+            </div>
+            <ul class="cards__item__services">
+              <li class="services__item">20 Websites/Servers</li>
+              <li class="services__item">5 Synthetic Web Transaction</li>
+              <li class="services__item">3-minute Poll Frequency</li>
+              <li class="services__item">Select from over 320+ Locations</li>
+              <li class="services__item">8 Network Monitoring Interfaces</li>
+              <li class="services__item">9 NetFlow Analyzer Interfaces</li>
+            </ul>
+            <a href="#" class="cards__item__link">Sign Up Now</a>
+          </li>
+          <li class="cards__item">
+            <h6 class="cards__item__header">Enterprise</h6>
+            <div class="cards__item__price">
+              <p class="price__number">$225</p>
+              <p class="price__term">/month</p>
+            </div>
+            <ul class="cards__item__services">
+              <li class="services__item">100 Websites/Servers</li>
+              <li class="services__item">15 Synthetic Web Transaction</li>
+              <li class="services__item">30-minute Poll Frequency</li>
+              <li class="services__item">Select from over 500+ Locations</li>
+              <li class="services__item">80 Network Monitoring Interfaces</li>
+              <li class="services__item">95 NetFlow Analyzer Interfaces</li>
+            </ul>
+            <a href="#" class="cards__item__link">Sign Up Now</a>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="questions">
+      <h2 class="questions__header">Frequently Asked Questions (FAQ)</h2>
+
+      <ul class="questions__list">
+        <li class="questions__list__item">
+          <details>
+            <summary class="questions__item__question">
+              1. What is a Monitor? What are the lists of Basic and Advanced monitors?
+              <img src="img/arrow.svg" class="question__item__img" alt="user-monitoring" title="user-monitoring">
+            </summary>
+            <div class="questions__item__answer">
+              Monitor refers to a resource like a server, website, web application instance or URL that is monitored for
+              uptime and performance. estac supports many types of monitors, each of these have various performance
+              metrics. For example,a server monitor has metrics like CPU, memory, disk utilization, network usage,
+              eventlogs, and process metrics. Likewise a website monitor has performance metrics like first byte time,
+              last byte time, DNS time, total response time, and uptime status.
+            </div>
+          </details>
+        </li>
+        <li class="questions__list__item"></li>
+        <li class="questions__list__item"></li>
+        <li class="questions__list__item"></li>
+        <li class="questions__list__item"></li>
+        <li class="questions__list__item"></li>
+        <li class="questions__list__item"></li>
+      </ul>
+    </section>
+
+    <section class="free">
+      <div class="free__container">
+        <h2 class="free__header">Get your FREE account now,50 monitors included!</h2>
+
+      </div>
+    </section>
+
   </main>
 </body>
 
