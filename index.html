@@ -10,13 +10,12 @@
 
 <body>
 
-  <!---- <header class="header">
+  <header class="header">
+    <nav class="header-list">
+      <a href="#" class="header__logo">
+        <img src="img/black-logo.svg" class="header__logo" alt="logo" title="estac logo">
+      </a>
 
-    <a href="#" class="header__logo">
-      <img src="img/black-logo.svg" class="header__logo" alt="logo" title="estac logo">
-    </a>
-
-    <nav class="menu">
       <ul class="menu-list">
         <li class="menu__list__item">
           <a href="#" class="menu__link">Products</a>
@@ -34,13 +33,15 @@
           <a href="#" class="menu__link">Pricing</a>
         </li>
         <li class="menu__list__item">
-          <button type="login-button" class="header__login-btn nav-btn">Login</button>
+          <a href="#" class="header__login-btn nav-btn">Login</a>
         </li>
         <li class="menu__list__item">
-          <button type="sign-up-button" class="header__sign-up-btn nav-btn">Signup</button>
+          <a href="#" class="header__sign-up-btn nav-btn">Signup</a>
         </li>
       </ul>
     </nav>
+
+
 
     <img src="img/menu.svg" class="menu-btn" alt="logo" title="estac logo">
   </header>
@@ -53,18 +54,24 @@
       menulist.classList.toggle('mobile-menu')
     })
   </script>
--->
+
   <main class="content">
 
     <section class="representation">
 
       <div class="representation-container">
-        <h1 clacc="representation-header">Monitoring Availability And End User Experience Made Simple.</h1>
+        <h1 clacc="representation-header">Monitoring Availability <br> And End User Experience Made Simple.</h1>
         <p class="representation-text">Simple to start, powerful to build better outcomes for DevOps and IT Operations.
         </p>
         <a href="#" class="start-btn">Start 30 Day Free Trail</a>
       </div>
-      <img src="img/girl.png" class="girl-img" alt="logo" title="estac logo">
+
+      <picture>
+        <source media="(max-width: 1100px)" srcset="./img/man.svg">
+        <source media="(min-width: 1184px)" srcset="./img/girl.png">
+        <img src="img/girl.png" class="content__img" alt="Описание изображения">
+      </picture>
+
 
     </section>
 
@@ -147,9 +154,12 @@
           </li>
         </ul>
       </div>
-      <div class="o-m">
-        <img src="img/office.jpg" class="office-img" alt="logo" title="estac logo">
-      </div>
+
+      <picture>
+        <source media="(min-width: 1184px)" srcset="./img/office.jpg">
+        <source media="(max-width: 1184px)" srcset="./img/ffice2.jpg">
+        <img class="office-img" src="img/office.jpg" alt="logo" title="estac logo">
+      </picture>
     </section>
 
     <section class="adavnce-feature">
@@ -157,43 +167,35 @@
 
       <ul class="adavnce-feature__grid-container">
         <li class="adavnce-feature__grid-container__item">
-          <img src="img/arrows.svg" class="adavnce-feature__grid-container__img" alt="vector planet" title="planet">
           <h5 class="adavnce-feature__grid-container__item__header">Share incident updates</h5>
           <p class="adavnce-feature__grid-container__item__text">Send status updates via an email to your Status page
             subscribers.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
-          <img src="img/closet.svg" class="adavnce-feature__grid-container__img" alt="vector closet" title="closet">
           <h5 class="adavnce-feature__grid-container__item__header">Server Monitoring</h5>
           <p class="adavnce-feature__grid-container__item__text">Monitor your servers for critical performance metrics
             and stay on top of
             your data center resources.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
-          <img src="img/cloud.svg" class="adavnce-feature__grid-container__img" alt="vector cloud" title="cloud">
           <h5 class="adavnce-feature__grid-container__item__header">Cloud Monitoring</h5>
           <p class="adavnce-feature__grid-container__item__text">Manage your cloud-based applications, services, and
             entire
             infrastructure with our tool.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
-          <img src="img/network.svg" class="adavnce-feature__grid-container__img" alt="vector network" title="network">
           <h5 class="adavnce-feature__grid-container__item__header">Network Monitoring</h5>
           <p class="adavnce-feature__grid-container__item__text">Gain complete control over your network using our
             cloud-based network
             monitoring tool.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
-          <img src="img/app-monitoring.svg" class="adavnce-feature__grid-container__img" alt="vector app-monitoring"
-            title="app-monitoring">
           <h5 class="adavnce-feature__grid-container__item__header">Application monitoring</h5>
           <p class="adavnce-feature__grid-container__item__text">Enhance your application's reliability, security, and
             performance by
             equipping your DevOps team</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
-          <img src="img/user-monitoring.svg" class="adavnce-feature__grid-container__img" alt="user-monitoring"
-            title="user-monitoring">
           <h5 class="adavnce-feature__grid-container__item__header">User Monitoring</h5>
           <p class="adavnce-feature__grid-container__item__text">Meticulously monitor user journeys and back it up with
             data from
@@ -373,7 +375,7 @@
           <details>
             <summary class="questions__item__question">
               1. What is a Monitor? What are the lists of Basic and Advanced monitors?
-              <img src="img/arrow.svg" class="question__item__img" alt="user-monitoring" title="user-monitoring">
+
             </summary>
             <div class="questions__item__answer">
               Monitor refers to a resource like a server, website, web application instance or URL that is monitored for
