@@ -6,9 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>estac</title>
   <link href="css/style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
+
+  <div class="preloader"></div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.querySelector('.preloader');
+
+      loader.classList.add('preloader-hidden');
+
+      loader.addEventListener('transitionend', () => {
+        document.body.removeChild('preloader');
+      });
+    });
+  </script>
 
   <header class="header">
     <nav class="header-list">
@@ -235,18 +250,23 @@
     </section>
 
     <section class="inform-customers">
-      <div class="inform-customers__contanier">
-        <div class="inform-customers__text-contanier">
-          <h2 class="inform-customers__header">Inform your customers about incidents with status pages</h2>
-          <p class="inform-customers__text">Show them how you thrive to make your service 100% online.</p>
+      <div class="inform-customers__wrap-contanier">
+        <div class="inform-customers__contanier">
+          <div class="inform-customers__text-contanier">
+            <h2 class="inform-customers__header">Inform your customers about incidents with status pages</h2>
+            <p class="inform-customers__text">Show them how you thrive to make your service 100% online.</p>
 
+          </div>
+          <picture class="inform-customers__img-container">
+            <source media="(min-width: 1184px)" srcset="./img/dashboard.png">
+            <source media="(min-width:769px)" srcset="./img/dashboard2.jpg">
+            <img src="img/dashboard.png" class="inform-customers__img" alt="user-monitoring" title="user-monitoring">
+          </picture>
         </div>
-        <img src="img/dashboard.png" class="inform-customers__img" alt="user-monitoring" title="user-monitoring">
-      </div>
-      <div class="inform-customers__btns">
-        <a href="#" class="inform-customers__start-btn inform-customers-btn">Start 30 Day Free Trail</a>
-        <a href="#" class="inform-customers__sign-btn inform-customers-btn">Sign Up Now</a>
-
+        <div class="inform-customers__btns">
+          <a href="#" class="inform-customers__start-btn inform-customers-btn">Start 30 Day Free Trail</a>
+          <a href="#" class="inform-customers__sign-btn inform-customers-btn">Sign Up Now</a>
+        </div>
       </div>
     </section>
 
@@ -291,8 +311,7 @@
     </section>
 
     <section class="pricing">
-
-      <div class="pricing__container">
+      <div class="pricing-contanier">
         <h2 class="pricing__header">Flexible pricing options</h2>
 
 
@@ -321,12 +340,12 @@
               <p class="price__term">/month</p>
             </div>
             <ul class="cards__item__services">
-              <li class="services__item">10 Websites/Servers</li>
-              <li class="services__item">1 Synthetic Web Transaction</li>
-              <li class="services__item">1-minute Poll Frequency</li>
-              <li class="services__item">Select from over 120+ Locations</li>
-              <li class="services__item">5 Network Monitoring Interfaces</li>
-              <li class="services__item">2 NetFlow Analyzer Interfaces</li>
+              <li class="services__item"><span class="first-letter">1</span>0 Websites/Servers</li>
+              <li class="services__item"><span class="first-letter">1</span> Synthetic Web Transaction</li>
+              <li class="services__item"><span class="first-letter">1</span>-minute Poll Frequency</li>
+              <li class="services__item"><span class="first-letter">S</span>elect from over 120+ Locations</li>
+              <li class="services__item"><span class="first-letter">5</span> Network Monitoring Interfaces</li>
+              <li class="services__item"><span class="first-letter">2</span> NetFlow Analyzer Interfaces</li>
             </ul>
             <a href="#" class="cards__item__link">Sign Up Now</a>
           </li>
@@ -337,12 +356,12 @@
               <p class="price__term">/month</p>
             </div>
             <ul class="cards__item__services">
-              <li class="services__item">20 Websites/Servers</li>
-              <li class="services__item">5 Synthetic Web Transaction</li>
-              <li class="services__item">3-minute Poll Frequency</li>
-              <li class="services__item">Select from over 320+ Locations</li>
-              <li class="services__item">8 Network Monitoring Interfaces</li>
-              <li class="services__item">9 NetFlow Analyzer Interfaces</li>
+              <li class="services__item"><span class="first-letter">2</span>0 Websites/Servers</li>
+              <li class="services__item"><span class="first-letter">5</span> Synthetic Web Transaction</li>
+              <li class="services__item"><span class="first-letter">3</span>-minute Poll Frequency</li>
+              <li class="services__item"><span class="first-letter">S</span>elect from over 320+ Locations</li>
+              <li class="services__item"><span class="first-letter">8</span> Network Monitoring Interfaces</li>
+              <li class="services__item"><span class="first-letter">9</span> NetFlow Analyzer Interfaces</li>
             </ul>
             <a href="#" class="cards__item__link">Sign Up Now</a>
           </li>
@@ -353,56 +372,193 @@
               <p class="price__term">/month</p>
             </div>
             <ul class="cards__item__services">
-              <li class="services__item">100 Websites/Servers</li>
-              <li class="services__item">15 Synthetic Web Transaction</li>
-              <li class="services__item">30-minute Poll Frequency</li>
-              <li class="services__item">Select from over 500+ Locations</li>
-              <li class="services__item">80 Network Monitoring Interfaces</li>
-              <li class="services__item">95 NetFlow Analyzer Interfaces</li>
+              <li class="services__item"><span class="first-letter">1</span>00 Websites/Servers</li>
+              <li class="services__item"><span class="first-letter">1</span>5 Synthetic Web Transaction</li>
+              <li class="services__item"><span class="first-letter">3</span>0-minute Poll Frequency</li>
+              <li class="services__item"><span class="first-letter">S</span>elect from over 500+ Locations</li>
+              <li class="services__item"><span class="first-letter">8</span>0 Network Monitoring Interfaces</li>
+              <li class="services__item"><span class="first-letter">9</span>5 NetFlow Analyzer Interfaces</li>
             </ul>
             <a href="#" class="cards__item__link">Sign Up Now</a>
           </li>
         </ul>
-      </div>
 
+        <ul class="pricing__cards cards-active">
+          <li class="cards__item card__item-active">
+            <h6 class="cards__item__header">Starter</h6>
+            <div class="cards__item__price cards__item__price-active">
+              <p class="price__number">$75</p>
+              <p class="price__term">/month</p>
+            </div>
+            <ul class="cards__item__services">
+              <li class="services__item"><span class="first-letter first-letter-active">1</span>0 Websites/Servers</li>
+              <li class="services__item"><span class="first-letter first-letter-active">1</span> Synthetic Web
+                Transaction</li>
+              <li class="services__item"><span class="first-letter first-letter-active">1</span>-minute Poll Frequency
+              </li>
+              <li class="services__item"><span class="first-letter first-letter-active">S</span>elect from over 120+
+                Locations</li>
+              <li class="services__item"><span class="first-letter first-letter-active">5</span> Network Monitoring
+                Interfaces</li>
+              <li class="services__item"><span class="first-letter first-letter-active">2</span> NetFlow Analyzer
+                Interfaces</li>
+            </ul>
+            <a href="#" class="cards__item__link cards__item__link-active">Sign Up Now</a>
+          </li>
+          <li class="cards__item card__item-active">
+            <h6 class="cards__item__header">Pro</h6>
+            <div class="cards__item__price cards__item__price-active">
+              <p class="price__number">$115</p>
+              <p class="price__term">/month</p>
+            </div>
+            <ul class="cards__item__services">
+              <li class="services__item"><span class="first-letter first-letter-active">2</span>0 Websites/Servers</li>
+              <li class="services__item"><span class="first-letter first-letter-active">5</span> Synthetic Web
+                Transaction</li>
+              <li class="services__item"><span class="first-letter first-letter-active">3</span>-minute Poll Frequency
+              </li>
+              <li class="services__item"><span class="first-letter first-letter-active">S</span>elect from over 320+
+                Locations</li>
+              <li class="services__item"><span class="first-letter first-letter-active">8</span> Network Monitoring
+                Interfaces</li>
+              <li class="services__item"><span class="first-letter first-letter-active">9</span> NetFlow Analyzer
+                Interfaces</li>
+            </ul>
+            <a href="#" class="cards__item__link cards__item__link-active">Sign Up Now</a>
+          </li>
+          <li class="cards__item card__item-active">
+            <h6 class="cards__item__header">Enterprise</h6>
+            <div class="cards__item__price cards__item__price-active">
+              <p class="price__number">$225</p>
+              <p class="price__term">/month</p>
+            </div>
+            <ul class="cards__item__services">
+              <li class="services__item"><span class="first-letter first-letter-active">1</span>00 Websites/Servers</li>
+              <li class="services__item"><span class="first-letter first-letter-active">1</span>5 Synthetic Web
+                Transaction</li>
+              <li class="services__item"><span class="first-letter first-letter-active">3</span>0-minute Poll Frequency
+              </li>
+              <li class="services__item"><span class="first-letter first-letter-active">S</span>elect from over 500+
+                Locations</li>
+              <li class="services__item"><span class="first-letter first-letter-active">8</span>0 Network Monitoring
+                Interfaces</li>
+              <li class="services__item"><span class="first-letter first-letter-active">9</span>5 NetFlow Analyzer
+                Interfaces</li>
+            </ul>
+            <a href="#" class="cards__item__link cards__item__link-active">Sign Up Now</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="questions">
-      <h2 class="questions__header">Frequently Asked Questions (FAQ)</h2>
+      <div class="questions-contanier">
+        <h2 class="questions__header">Frequently Asked Questions (FAQ)</h2>
 
-      <ul class="questions__list">
-        <li class="questions__list__item">
-          <details>
-            <summary class="questions__item__question">
-              1. What is a Monitor? What are the lists of Basic and Advanced monitors?
+        <ul class="questions__list">
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                1. What is a Monitor? What are the lists of Basic and Advanced monitors?
 
-            </summary>
-            <div class="questions__item__answer">
-              Monitor refers to a resource like a server, website, web application instance or URL that is monitored for
-              uptime and performance. estac supports many types of monitors, each of these have various performance
-              metrics. For example,a server monitor has metrics like CPU, memory, disk utilization, network usage,
-              eventlogs, and process metrics. Likewise a website monitor has performance metrics like first byte time,
-              last byte time, DNS time, total response time, and uptime status.
-            </div>
-          </details>
-        </li>
-        <li class="questions__list__item"></li>
-        <li class="questions__list__item"></li>
-        <li class="questions__list__item"></li>
-        <li class="questions__list__item"></li>
-        <li class="questions__list__item"></li>
-        <li class="questions__list__item"></li>
-      </ul>
+              </summary>
+              <div class="questions__item__answer">
+                Monitor refers to a resource like a server, website, web application instance or URL that is monitored
+                for
+                uptime and performance. estac supports many types of monitors, each of these have various performance
+                metrics. For example,a server monitor has metrics like CPU, memory, disk utilization, network usage,
+                eventlogs, and process metrics. Likewise a website monitor has performance metrics like first byte time,
+                last byte time, DNS time, total response time, and uptime status.
+              </div>
+            </details>
+          </li>
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                2. Can I monitor my website from all Site24x7 locations?
+              </summary>
+              <div class="questions__item__answer">
+                Yes, you can monitor your website from all Site24x7 locations. This allows for comprehensive coverage
+                and helps identify performance issues that may affect users in different geographical areas.
+              </div>
+            </details>
+          </li>
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                3. How is server monitoring licensed?
+              </summary>
+              <div class="questions__item__answer">
+                Server monitoring is typically licensed based on the number of servers you wish to monitor. Licensing
+                options may vary, so it's best to check with your provider for specific details regarding pricing and
+                features included in each license.
+              </div>
+            </details>
+          </li>
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                4. Do I have to pay extra to monitor resources on my server?
+              </summary>
+              <div class="questions__item__answer">
+                This depends on the monitoring service you choose. Some services include resource monitoring in their
+                base package, while others may charge extra for additional features or more comprehensive monitoring
+                options.
+              </div>
+            </details>
+          </li>
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                5. How many plugins can I add per server monitor?
+              </summary>
+              <div class="questions__item__answer">
+                The number of plugins you can add per server monitor usually depends on the monitoring platform you are
+                using. Some platforms may have limits, while others allow extensive customization with numerous plugins
+                to enhance monitoring capabilities.
+              </div>
+            </details>
+          </li>
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                6. How are metrics pushed via the StatD daemon charged?
+              </summary>
+              <div class="questions__item__answer">
+                Metrics pushed via the StatD daemon are typically charged based on the volume of data processed or the
+                number of monitored metrics. Check with your service provider for specific pricing structures related to
+                data transmission and storage.
+              </div>
+            </details>
+          </li>
+          <li class="questions__list__item">
+            <details>
+              <summary class="questions__item__question">
+                7. How are Docker and Kubernetes monitoring licensed?
+              </summary>
+              <div class="questions__item__answer">
+                Docker and Kubernetes monitoring is often licensed based on the number of containers or clusters being
+                monitored. Specific licensing terms can vary, so it's advisable to consult with your provider for
+                detailed information.
+              </div>
+            </details>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="free">
       <div class="free__container">
-        <h2 class="free__header">Get your FREE account now,50 monitors included!</h2>
-
+        <div class="free__content">
+          <h2 class="free__header">Get your FREE account now,50 monitors included!</h2>
+          <a href="#" class="free__link">Sing Up Now</a>
+          <p class="free__text">No credit card required!</p>
+        </div>
       </div>
     </section>
-
   </main>
+
+  <footer class="footer"></footer>
 </body>
 
 </html>
