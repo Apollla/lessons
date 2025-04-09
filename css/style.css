@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header-right"
+    "navigation right-upper"
+    "main right-lower"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr 2fr auto;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #FAE69D;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-right {
+  grid-area: header-right;
+  text-align: right;
+}
+
+.navigation {
+  grid-area: navigation;
+  background-color: #D1C4E9;
+  padding: 20px;
+}
+
+.main {
+  grid-area: main;
+  background-color: #F8BBD0;
+  padding: 20px;
+}
+
+.right-upper {
+  grid-area: right-upper;
+  background-color: #81D4FA;
+  padding: 20px;
+  text-align: center;
+}
+
+.right-lower {
+  grid-area: right-lower;
+  background-color: #81D4FA;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #B2DFDB;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
