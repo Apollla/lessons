@@ -6,30 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>estac</title>
   <link href="css/style.css" rel="stylesheet" type="text/css">
-
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
-
-  <div class="preloader"></div>
-
-  <script>
-    window.addEventListener('load', () => {
-      const loader = document.querySelector('.preloader');
-
-      loader.classList.add('preloader-hidden');
-
-      loader.addEventListener('transitionend', () => {
-        document.body.removeChild('preloader');
-      });
-    });
-  </script>
+<div class="preloader">
 
   <header class="header">
     <nav class="header-list">
       <a href="#" class="header__logo">
-        <img src="img/black-logo.svg" class="header__logo" alt="logo" title="estac logo">
+        <img src="img/black-logo.svg" class="header__logo" alt="estac logo" title="dark estac logo">
       </a>
 
       <ul class="menu-list">
@@ -57,24 +43,11 @@
       </ul>
     </nav>
 
-
-
-    <img src="img/menu.svg" class="menu-btn" alt="logo" title="estac logo">
+    <img src="img/menu.svg" class="menu-btn" alt="menu" title="mobile menu">
   </header>
 
-  <script>
-    const menuBtn = document.querySelector('.menu-btn')
-    const menulist = document.querySelector('.menu-list')
-
-    menuBtn.addEventListener('click', () => {
-      menulist.classList.toggle('mobile-menu')
-    })
-  </script>
-
-  <main class="content">
-
+  <main>
     <section class="representation">
-
       <div class="representation-container">
         <h1 clacc="representation-header">Monitoring Availability <br> And End User Experience Made Simple.</h1>
         <p class="representation-text">Simple to start, powerful to build better outcomes for DevOps and IT Operations.
@@ -83,12 +56,10 @@
       </div>
 
       <picture>
-        <source media="(max-width: 1100px)" srcset="./img/man.svg">
-        <source media="(min-width: 1184px)" srcset="./img/girl.png">
-        <img src="img/girl.png" class="content__img" alt="Описание изображения">
+        <source media="(max-width: 1100px)" srcset="./img/man.svg" alt="man" title="man picture">
+        <source media="(min-width: 1184px)" srcset="./img/girl.png" alt="girl" title="girl picture">
+        <img src="img/girl.png" class="content__img" alt="girl" title="girl picture">
       </picture>
-
-
     </section>
 
     <srction class="banner">
@@ -106,63 +77,51 @@
 
       <ul class="all-in-one__grid-container">
         <li class="all-in-one__grid-container__item">
-          <img src="img/planet.svg" class="grid-container__img" alt="vector planet" title="planet">
-          <h5 class="grid-container__item__header">Website monitoring</h5>
-          <p class="grid-container__item__text">Get your website checked every 30 seconds from more than 120+ locations!
-          </p>
+          <img src="img/planet.svg" class="grid-container__img" alt="planet" title="website monitoring planet">
+          <h5 class="grid-container__item__header">Website Monitoring</h5>
+          <p class="grid-container__item__text">Get your website checked every 30 seconds from more than 120+ locations!</p>
         </li>
         <li class="all-in-one__grid-container__item">
-          <img src="img/closet.svg" class="grid-container__img" alt="vector closet" title="closet">
+          <img src="img/closet.svg" class="grid-container__img" alt="vector closet" title="server monitoring closet">
           <h5 class="grid-container__item__header">Server Monitoring</h5>
-          <p class="grid-container__item__text">Monitor your servers for critical performance metrics and stay on top of
-            your data center resources.</p>
+          <p class="grid-container__item__text">Monitor your servers for critical performance metrics and stay on top of your data center resources.</p>
         </li>
         <li class="all-in-one__grid-container__item">
-          <img src="img/cloud.svg" class="grid-container__img" alt="vector cloud" title="cloud">
+          <img src="img/cloud.svg" class="grid-container__img" alt="cloud" title="cloud monitoring cloud">
           <h5 class="grid-container__item__header">Cloud Monitoring</h5>
-          <p class="grid-container__item__text">Manage your cloud-based applications, services, and entire
-            infrastructure with our tool.</p>
+          <p class="grid-container__item__text">Manage your cloud-based applications, services, and entire infrastructure with our tool.</p>
         </li>
         <li class="all-in-one__grid-container__item">
-          <img src="img/network.svg" class="grid-container__img" alt="vector network" title="network">
+          <img src="img/network.svg" class="grid-container__img" alt="network" title="network monitoring network">
           <h5 class="grid-container__item__header">Network Monitoring</h5>
-          <p class="grid-container__item__text">Gain complete control over your network using our cloud-based network
-            monitoring tool.</p>
+          <p class="grid-container__item__text">Gain complete control over your network using our cloud-based network monitoring tool.</p>
         </li>
         <li class="all-in-one__grid-container__item">
-          <img src="img/app-monitoring.svg" class="grid-container__img" alt="vector app-monitoring"
-            title="app-monitoring">
-          <h5 class="grid-container__item__header">Application monitoring</h5>
-          <p class="grid-container__item__text">Enhance your application's reliability, security, and performance by
-            equipping your DevOps team</p>
+          <img src="img/app-monitoring.svg" class="grid-container__img" alt="app-monitoring" title="application monitoring app-monitoring">
+          <h5 class="grid-container__item__header">Application Monitoring</h5>
+          <p class="grid-container__item__text">Enhance your application's reliability, security, and performance by equipping your DevOps team</p>
         </li>
         <li class="all-in-one__grid-container__item">
           <img src="img/user-monitoring.svg" class="grid-container__img" alt="user-monitoring" title="user-monitoring">
           <h5 class="grid-container__item__header">User Monitoring</h5>
-          <p class="grid-container__item__text">Meticulously monitor user journeys and back it up with data from
-            synthetic tests with real user monitoring tool.</p>
+          <p class="grid-container__item__text">Meticulously monitor user journeys and back it up with data from synthetic tests with real user monitoring tool.</p>
         </li>
       </ul>
-
     </section>
 
     <section class="choose-us">
       <div class="choose-us__container">
         <p class="choose-us__question">Why You Choose Us?</p>
         <h2 class="choose-us__header">Expert in Web Monitoring</h2>
-        <p class="choose-us__text">With years of experience in the industry, we specialize in providing top-notch web
-          monitoring solutions. Our services are designed to ensure your website runs smoothly and efficiently, allowing
-          you to focus on your core business.</p>
+        <p class="choose-us__text">With years of experience in the industry, we specialize in providing top-notch web monitoring solutions. Our services are designed to ensure your website runs smoothly and efficiently, allowing you to focus on your core business.</p>
         <ul class="choose-us__reasons">
           <li class="choose-us__reasons__item" id="gear-item">
             <h5 class="choose-us__reasons__item__header">Working Process</h5>
-            <p class="choose-us__reasons__item__text">We monitor uptime and alert you instantly if any issues arise,
-              minimizing downtime and maintaining your brand’s reputation.</p>
+            <p class="choose-us__reasons__item__text">We monitor uptime and alert you instantly if any issues arise, minimizing downtime and maintaining your brand’s reputation.</p>
           </li>
           <li class="choose-us__reasons__item" id="team-item">
             <h5 class="choose-us__reasons__item__header">Dedicated Team</h5>
-            <p class="choose-us__reasons__item__text">Knowledgeable team ready to tackle any challenges, you can rest
-              assured that your monitoring needs are in good hands.</p>
+            <p class="choose-us__reasons__item__text">Knowledgeable team ready to tackle any challenges, you can rest assured that your monitoring needs are in good hands.</p>
           </li>
           <li class="choose-us__reasons__item" id="support-item">
             <h5 class="choose-us__reasons__item__header">24/7 Support</h5>
@@ -172,65 +131,51 @@
       </div>
 
       <picture>
-        <source media="(min-width: 1184px)" srcset="./img/office.jpg">
-        <source media="(max-width: 1184px)" srcset="./img/ffice2.jpg">
-        <img class="office-img" src="img/office.jpg" alt="logo" title="estac logo">
+        <source media="(min-width: 1184px)" srcset="./img/office.jpg" alt="office" title="office horizontal img">
+        <source media="(max-width: 1184px)" srcset="./img/ffice2.jpg" alt="office" title="office vertical img">
+        <img class="office-img" src="img/office.jpg" alt="office" title="office vertical img">
       </picture>
     </section>
 
     <section class="adavnce-feature">
       <h2 class="adavnce-feature__header">Advance feature <br> for advanced users</h2>
-
       <ul class="adavnce-feature__grid-container">
         <li class="adavnce-feature__grid-container__item">
           <h5 class="adavnce-feature__grid-container__item__header">Share incident updates</h5>
-          <p class="adavnce-feature__grid-container__item__text">Send status updates via an email to your Status page
-            subscribers.</p>
+          <p class="adavnce-feature__grid-container__item__text">Send status updates via an email to your Status page subscribers.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
           <h5 class="adavnce-feature__grid-container__item__header">Server Monitoring</h5>
-          <p class="adavnce-feature__grid-container__item__text">Monitor your servers for critical performance metrics
-            and stay on top of
-            your data center resources.</p>
+          <p class="adavnce-feature__grid-container__item__text">Monitor your servers for critical performance metrics and stay on top of your data center resources.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
           <h5 class="adavnce-feature__grid-container__item__header">Cloud Monitoring</h5>
-          <p class="adavnce-feature__grid-container__item__text">Manage your cloud-based applications, services, and
-            entire
-            infrastructure with our tool.</p>
+          <p class="adavnce-feature__grid-container__item__text">Manage your cloud-based applications, services, and entire infrastructure with our tool.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
           <h5 class="adavnce-feature__grid-container__item__header">Network Monitoring</h5>
-          <p class="adavnce-feature__grid-container__item__text">Gain complete control over your network using our
-            cloud-based network
-            monitoring tool.</p>
+          <p class="adavnce-feature__grid-container__item__text">Gain complete control over your network using our cloud-based network monitoring tool.</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
           <h5 class="adavnce-feature__grid-container__item__header">Application monitoring</h5>
-          <p class="adavnce-feature__grid-container__item__text">Enhance your application's reliability, security, and
-            performance by
-            equipping your DevOps team</p>
+          <p class="adavnce-feature__grid-container__item__text">Enhance your application's reliability, security, and performance by equipping your DevOps team</p>
         </li>
         <li class="adavnce-feature__grid-container__item">
           <h5 class="adavnce-feature__grid-container__item__header">User Monitoring</h5>
-          <p class="adavnce-feature__grid-container__item__text">Meticulously monitor user journeys and back it up with
-            data from
-            synthetic tests with real user monitoring tool.</p>
+          <p class="adavnce-feature__grid-container__item__text">Meticulously monitor user journeys and back it up with data from synthetic tests with real user monitoring tool.</p>
         </li>
       </ul>
-
     </section>
 
     <section class="keep-monitoring">
       <div class="keep-monitoring__container">
         <h2 class="keep-monitoring__header">Keep monitoring <br> Everywhere you go</h2>
-        <p class="keep-monitoring__text">Get Instant Notifications, Manage Monitors And Check Your Uptime Statistics On
-          The Go.</p>
+        <p class="keep-monitoring__text">Get Instant Notifications, Manage Monitors And Check Your Uptime Statistics On The Go.</p>
         <a href="#" class="keep-monitoring__btn">Sign Up Now</a>
       </div>
 
-      <img src="img/balls1.png" class="keep-monitoring__balls-1" alt="user-monitoring" title="user-monitoring">
-      <img src="img/balls2.png" class="keep-monitoring__balls-2" alt="user-monitoring" title="user-monitoring">
+      <img src="img/balls1.png" class="keep-monitoring__balls-1" alt="background balls-1" title="background balls-1">
+      <img src="img/balls2.png" class="keep-monitoring__balls-2" alt="background balls-2" title="background balls-2">
     </section>
 
     <section class="statistics">
@@ -256,12 +201,12 @@
           <div class="inform-customers__text-contanier">
             <h2 class="inform-customers__header">Inform your customers about incidents with status pages</h2>
             <p class="inform-customers__text">Show them how you thrive to make your service 100% online.</p>
-
           </div>
+
           <picture class="inform-customers__img-container">
-            <source media="(min-width: 1184px)" srcset="./img/dashboard.png">
-            <source media="(min-width:769px)" srcset="./img/dashboard2.jpg">
-            <img src="img/dashboard.png" class="inform-customers__img" alt="user-monitoring" title="user-monitoring">
+            <source media="(min-width: 1184px)" srcset="./img/dashboard.png" alt="horizontal dashboard picture" title="horizontal dashboard picture">
+            <source media="(min-width:769px)" srcset="./img/dashboard2.jpg" alt="vertical dashboard picture" title="vertical dashboard picture">
+            <img src="img/dashboard.png" class="inform-customers__img" alt="horizontal dashboard picture" title="horizontal dashboard picture">
           </picture>
         </div>
         <div class="inform-customers__btns">
@@ -271,104 +216,133 @@
       </div>
     </section>
 
-    <section class="check">
-      <h2 class="check__header">Let’s Check What Out Clients Say about Us</h2>
-      <p class="check__text">Simple to start, powerful at scale, and proven to build better outcomes for your
-        organizaation.</p>
-
-      <div class="comment">
-        <div class="comment__client">
-          <img src="img/client.png" class="client-photo" alt="user-monitoring" title="user-monitoring">
-          <div class="client-info">
-            <p class="client-name">Jonathon Smith</p>
-            <p class="client-occupation">Project Manager</p>
+    <section class="testimonials">
+      <div class="testimonials__container">
+        <div class="testimonials-slider">
+          <h2 class="slider-title">Let’s Check What Out Clients Say about Us</h2>
+          <p class="testimonials-text">Simple to start, powerful at scale, and proven to build better outcomes for your organizaation.</p>
+          <div class="testimonials-track">
+            <div class="testimonial">
+              <div class="user-info">
+                <img src="img/sarah.jpg" class="user-avatar" alt="Sarah" title="Sarah">
+                <h5 class="user-name">Sarah J.</h5>
+                <p class="user-position">Marketing Director</p>
+              </div>
+              <div class="rating">★★★★★</div>
+              <q class="testimonial-text">The data insights provided transformed our marketing strategy. Their analysis was incredibly accurate and helped us increase conversions.</q>
+            </div>
+            <div class="testimonial">
+              <div class="user-info">
+                <img src="img/michael.jpg" class="user-avatar" alt="Michael" title="michael">
+                <h5 class="user-name">Michael T.</h5>
+                <p class="user-position">CEO, Tech Startup</p>
+              </div>
+              <div class="rating">★★★★★</div>
+              <q class="testimonial-text">Their predictive analytics saved us months of trial and error. Professional team with deep data science expertise.</q>
+            </div>
+            <div class="testimonial">
+              <div class="user-info">
+                <img src="img/emily.jpg" class="user-avatar" alt="Emily" title="Emily">
+                <h5 class="user-name">Emily R.</h5>
+                <p class="user-position">Data Analyst</p>
+              </div>
+              <div class="rating">★★★★☆</div>
+              <q class="testimonial-text">Impressed with their methodologies. They uncovered patterns in our data that we had completely missed.</q>
+            </div>
+            <div class="testimonial">
+              <div class="user-info">
+                <img src="img/david.jpg" class="user-avatar" alt="David" title="David">
+                <h5 class="user-name">David K.</h5>
+                <p class="user-position">Financial Director</p>
+              </div>
+              <div class="rating">★★★★★</div>
+              <q class="testimonial-text">Their risk analysis helped us avoid bad investments. The ROI from their services has been phenomenal.</q>
+            </div>
           </div>
-        </div>
-        <blockquote class="comment__text">I’ve downloaded Hrrd from my Google Play about 1 years ago. This make the
-          prototype
-          process so easy and faster. I feel it is a best app for prototype.</blockquote>
-        <p class="comment__date">9th June, 2022</p>
 
+          <button class="slider-arrow prev">❮</button>
+          <button class="slider-arrow next">❯</button>
+        </div>
+      </div>
+      </div>
     </section>
 
     <section class="pricing">
       <div class="pricing-contanier">
         <h2 class="pricing__header">Flexible pricing options</h2>
-
-
-        <div class="toggle" id="toggle">
-          <div class="active">Monthly</div>
-          <div class="inactive">Yearly</div>
+        <div class="toggle-container">
+          <div class="toggle" id="toggle">
+            <div class="active">Monthly</div>
+            <div class="inactive">Yearly</div>
+          </div>
         </div>
 
-        <script>
-          const toggle = document.getElementById('toggle');
-          const items = toggle.children;
-
-          toggle.addEventListener('click', () => {
-            items[0].classList.toggle('active');
-            items[0].classList.toggle('inactive');
-            items[1].classList.toggle('active');
-            items[1].classList.toggle('inactive');
-          });
-        </script>
-
-
-
-
-        <ul class="pricing__cards">
-          <li class="cards__item">
-            <h6 class="cards__item__header">Starter</h6>
-            <div class="cards__item__price">
-              <p class="price__number">$75</p>
-              <p class="price__term">/month</p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="cards__item">
+                <h6 class="cards__item__header">Starter</h6>
+                <div class="cards__item__price">
+                  <p class="price__number">$75</p>
+                  <p class="price__term">/month</p>
+                </div>
+                <ul class="cards__item__services">
+                  <li class="services__item"><span class="first-letter">1</span>0 Websites/Servers</li>
+                  <li class="services__item"><span class="first-letter">1</span> Synthetic Web Transaction</li>
+                  <li class="services__item"><span class="first-letter">1</span>-minute Poll Frequency</li>
+                  <li class="services__item"><span class="first-letter">S</span>elect from over 120+ Locations</li>
+                  <li class="services__item"><span class="first-letter">5</span> Network Monitoring Interfaces</li>
+                  <li class="services__item"><span class="first-letter">2</span> NetFlow Analyzer Interfaces</li>
+                </ul>
+                <a href="#" class="cards__item__link">Sign Up Now</a>
+                </li>
+              </div>
             </div>
-            <ul class="cards__item__services">
-              <li class="services__item"><span class="first-letter">1</span>0 Websites/Servers</li>
-              <li class="services__item"><span class="first-letter">1</span> Synthetic Web Transaction</li>
-              <li class="services__item"><span class="first-letter">1</span>-minute Poll Frequency</li>
-              <li class="services__item"><span class="first-letter">S</span>elect from over 120+ Locations</li>
-              <li class="services__item"><span class="first-letter">5</span> Network Monitoring Interfaces</li>
-              <li class="services__item"><span class="first-letter">2</span> NetFlow Analyzer Interfaces</li>
-            </ul>
-            <a href="#" class="cards__item__link">Sign Up Now</a>
-          </li>
-          <li class="cards__item">
-            <h6 class="cards__item__header">Pro</h6>
-            <div class="cards__item__price">
-              <p class="price__number">$115</p>
-              <p class="price__term">/month</p>
+            <div class="swiper-slide">
+              <div class="cards__item">
+                <h6 class="cards__item__header">Pro</h6>
+                <div class="cards__item__price">
+                  <p class="price__number">$115</p>
+                  <p class="price__term">/month</p>
+                </div>
+                <ul class="cards__item__services">
+                  <li class="services__item"><span class="first-letter">2</span>0 Websites/Servers</li>
+                  <li class="services__item"><span class="first-letter">5</span> Synthetic Web Transaction</li>
+                  <li class="services__item"><span class="first-letter">3</span>-minute Poll Frequency</li>
+                  <li class="services__item"><span class="first-letter">S</span>elect from over 320+ Locations</li>
+                  <li class="services__item"><span class="first-letter">8</span> Network Monitoring Interfaces</li>
+                  <li class="services__item"><span class="first-letter">9</span> NetFlow Analyzer Interfaces</li>
+                </ul>
+                <a href="#" class="cards__item__link">Sign Up Now</a>
+              </div>
             </div>
-            <ul class="cards__item__services">
-              <li class="services__item"><span class="first-letter">2</span>0 Websites/Servers</li>
-              <li class="services__item"><span class="first-letter">5</span> Synthetic Web Transaction</li>
-              <li class="services__item"><span class="first-letter">3</span>-minute Poll Frequency</li>
-              <li class="services__item"><span class="first-letter">S</span>elect from over 320+ Locations</li>
-              <li class="services__item"><span class="first-letter">8</span> Network Monitoring Interfaces</li>
-              <li class="services__item"><span class="first-letter">9</span> NetFlow Analyzer Interfaces</li>
-            </ul>
-            <a href="#" class="cards__item__link">Sign Up Now</a>
-          </li>
-          <li class="cards__item">
-            <h6 class="cards__item__header">Enterprise</h6>
-            <div class="cards__item__price">
-              <p class="price__number">$225</p>
-              <p class="price__term">/month</p>
+            <div class="swiper-slide">
+              <div class="cards__item">
+                <h6 class="cards__item__header">Enterprise</h6>
+                <div class="cards__item__price">
+                  <p class="price__number">$225</p>
+                  <p class="price__term">/month</p>
+                </div>
+                <ul class="cards__item__services">
+                  <li class="services__item"><span class="first-letter">1</span>00 Websites/Servers</li>
+                  <li class="services__item"><span class="first-letter">1</span>5 Synthetic Web Transaction</li>
+                  <li class="services__item"><span class="first-letter">3</span>0-minute Poll Frequency</li>
+                  <li class="services__item"><span class="first-letter">S</span>elect from over 500+ Locations</li>
+                  <li class="services__item"><span class="first-letter">8</span>0 Network Monitoring Interfaces</li>
+                  <li class="services__item"><span class="first-letter">9</span>5 NetFlow Analyzer Interfaces</li>
+                </ul>
+                <a href="#" class="cards__item__link">Sign Up Now</a>
+              </div>
             </div>
-            <ul class="cards__item__services">
-              <li class="services__item"><span class="first-letter">1</span>00 Websites/Servers</li>
-              <li class="services__item"><span class="first-letter">1</span>5 Synthetic Web Transaction</li>
-              <li class="services__item"><span class="first-letter">3</span>0-minute Poll Frequency</li>
-              <li class="services__item"><span class="first-letter">S</span>elect from over 500+ Locations</li>
-              <li class="services__item"><span class="first-letter">8</span>0 Network Monitoring Interfaces</li>
-              <li class="services__item"><span class="first-letter">9</span>5 NetFlow Analyzer Interfaces</li>
-            </ul>
-            <a href="#" class="cards__item__link">Sign Up Now</a>
-          </li>
-        </ul>
+          </div>
 
-
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
+    </section>
+    </div>
     </section>
 
     <section class="questions">
@@ -378,89 +352,47 @@
         <ul class="questions__list">
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                1. What is a Monitor? What are the lists of Basic and Advanced monitors?
-
-              </summary>
-              <div class="questions__item__answer">
-                Monitor refers to a resource like a server, website, web application instance or URL that is monitored
-                for
-                uptime and performance. estac supports many types of monitors, each of these have various performance
-                metrics. For example,a server monitor has metrics like CPU, memory, disk utilization, network usage,
-                eventlogs, and process metrics. Likewise a website monitor has performance metrics like first byte time,
-                last byte time, DNS time, total response time, and uptime status.
-              </div>
+              <summary class="questions__item__question">1. What is a Monitor? What are the lists of Basic and Advanced monitors?</summary>
+              <div class="questions__item__answer">Monitor refers to a resource like a server, website, web application instance or URL that is monitored for uptime and performance. estac supports many types of monitors, each of these have various performance metrics. For example,a server monitor has metrics like CPU, memory, disk utilization, network usage, eventlogs, and process metrics. Likewise a website monitor has performance metrics like first byte time, last byte time, DNS time, total response time, and uptime status.</div>
             </details>
           </li>
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                2. Can I monitor my website from all Site24x7 locations?
-              </summary>
-              <div class="questions__item__answer">
-                Yes, you can monitor your website from all Site24x7 locations. This allows for comprehensive coverage
-                and helps identify performance issues that may affect users in different geographical areas.
-              </div>
+              <summary class="questions__item__question">2. Can I monitor my website from all Site24x7 locations?</summary>
+              <div class="questions__item__answer">Yes, you can monitor your website from all Site24x7 locations. This allows for comprehensive coverage and helps identify performance issues that may affect users in different geographical areas.</div>
             </details>
           </li>
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                3. How is server monitoring licensed?
-              </summary>
-              <div class="questions__item__answer">
-                Server monitoring is typically licensed based on the number of servers you wish to monitor. Licensing
-                options may vary, so it's best to check with your provider for specific details regarding pricing and
-                features included in each license.
-              </div>
+              <summary class="questions__item__question">3. How is server monitoring licensed?</summary>
+              <div class="questions__item__answer">Server monitoring is typically licensed based on the number of servers you wish to monitor. Licensing options may vary, so it's best to check with your provider for specific details regarding pricing and features included in each license.</div>
             </details>
           </li>
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                4. Do I have to pay extra to monitor resources on my server?
-              </summary>
-              <div class="questions__item__answer">
-                This depends on the monitoring service you choose. Some services include resource monitoring in their
-                base package, while others may charge extra for additional features or more comprehensive monitoring
-                options.
-              </div>
+              <summary class="questions__item__question">4. Do I have to pay extra to monitor resources on my server?</summary>
+              <div class="questions__item__answer">This depends on the monitoring service you choose. Some services include resource monitoring in their base package, while others may charge extra for additional features or more comprehensive monitoring options.</div>
             </details>
           </li>
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                5. How many plugins can I add per server monitor?
-              </summary>
-              <div class="questions__item__answer">
-                The number of plugins you can add per server monitor usually depends on the monitoring platform you are
-                using. Some platforms may have limits, while others allow extensive customization with numerous plugins
-                to enhance monitoring capabilities.
-              </div>
+              <summary class="questions__item__question">5. How many plugins can I add per server monitor?</summary>
+              <div class="questions__item__answer">The number of plugins you can add per server monitor usually depends on the monitoring platform you are using. Some platforms may have limits, while others allow extensive customization with numerous plugins
+                to enhance monitoring capabilities.</div>
             </details>
           </li>
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                6. How are metrics pushed via the StatD daemon charged?
-              </summary>
-              <div class="questions__item__answer">
-                Metrics pushed via the StatD daemon are typically charged based on the volume of data processed or the
-                number of monitored metrics. Check with your service provider for specific pricing structures related to
-                data transmission and storage.
-              </div>
+              <summary class="questions__item__question">6. How are metrics pushed via the StatD daemon charged?</summary>
+              <div class="questions__item__answer">Metrics pushed via the StatD daemon are typically charged based on the volume of data processed or the number of monitored metrics. Check with your service provider for specific pricing structures related to
+                data transmission and storage. </div>
             </details>
           </li>
           <li class="questions__list__item">
             <details>
-              <summary class="questions__item__question">
-                7. How are Docker and Kubernetes monitoring licensed?
-              </summary>
-              <div class="questions__item__answer">
-                Docker and Kubernetes monitoring is often licensed based on the number of containers or clusters being
-                monitored. Specific licensing terms can vary, so it's advisable to consult with your provider for
-                detailed information.
-              </div>
+              <summary class="questions__item__question">7. How are Docker and Kubernetes monitoring licensed?</summary>
+              <div class="questions__item__answer">Docker and Kubernetes monitoring is often licensed based on the number of containers or clusters being monitored. Specific licensing terms can vary, so it's advisable to consult with your provider for
+                detailed information.</div>
             </details>
           </li>
         </ul>
@@ -470,7 +402,6 @@
     <section class="free">
       <div class="free__container">
         <div class="free__content">
-
           <h2 class="free__header">Get your FREE account now,50 monitors included!</h2>
           <a href="#" class="free__link">Sing Up Now</a>
           <p class="free__text">No credit card required!</p>
@@ -483,7 +414,7 @@
     <div class="footer__container">
       <div class="footer-upper">
         <a href="#">
-          <img class="footer__light-logo" src="img/estac-light.svg">
+          <img class="footer__light-logo" src="img/estac-light.svg" alt="estac logo" title="estac light logo">
         </a>
         <p class="footer-upper__text">Get insights about estac. Once per month. No spam, ever!</p>
         <div class="input-button-container">
@@ -494,11 +425,7 @@
       <div class="footer-middle">
         <ul class="footer__links footer__not-link">
           <li class="footer__links__header">Downtime happens. Get notified!</li>
-          <li class="footer__links__list not-link">Join more than 1,600,000 happy users! UptimeRobot is one of the most
-            popular
-            website monitoring services
-            in
-            the world.</li>
+          <li class="footer__links__list not-link">Join more than 1,600,000 happy users! UptimeRobot is one of the most popular website monitoring services in the world.</li>
         </ul>
 
         <ul class="footer__links">
@@ -516,6 +443,7 @@
           <li class="footer__links__list"><a href=" #">Affiliate program</a></li>
           <li class="footer__links__list"><a href=" #">Terms / Privacy</a></li>
         </ul>
+
         <ul class="footer__links">
           <li class="footer__links__header">Resources</li>
           <li class="footer__links__list"><a href=" #">Integrations</a></li>
@@ -526,11 +454,12 @@
 
       <div class="footer-bottom">
         <p class="footer-bottom__text">© Copyright 2022 - estac - All Rights Reserved.</p>
-        <img class="footer-bottom__img" src="img/bank-cards.png" alt="bank cards">
+        <img class="footer-bottom__img" src="img/bank-cards.png" alt="bank cards" title="bank cards">
       </div>
     </div>
-
   </footer>
-</body>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
