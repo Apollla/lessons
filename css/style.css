@@ -84,7 +84,6 @@ body {
 p {
   font: var(--text);
   line-height: 140%;
-  letter-spacing: 1.5%;
 }
 
 q {
